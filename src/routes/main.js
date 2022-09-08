@@ -5,6 +5,7 @@ const indexController = require('../controllers/indexController');
 const userLog = require("../middlewares/userLogs")
 
 
+
 router
     .get("/",userLog, indexController.index) 
     .get("/services",userLog, indexController.services) 

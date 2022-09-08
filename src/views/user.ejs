@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head") %> 
-<body>
+<body class="<%= session.color %>">
 	<h1><%= title %> </h1>
 	<%- include("./partials/header") %> 
 	<div>
@@ -10,6 +10,9 @@
 		<p><%= session.email %></p>
 		<p><%= session.edad %></p>
 	</div>
+	<form action="/user/quit">
+	  <button type="submit">Quitar color</button> 
+	</form>
 	
 	<img src="/images/node.jpg" width="60%">
 </body>

@@ -17,15 +17,15 @@
                     <label for="colour">Color a eleccion</label>
                     <select name="color" id="color" >
                         <option></option>
-                        <option>green</option>
-                        <option>yellow</option>
-                        <option>blue</option>
-                        <option>red</option>
+                        <option value="green">green</option>
+                        <option value="yellow">yellow</option>
+                        <option value="blue">blue</option>
+                        <option value="red">red</option>
                     </select>   
                 </div>
                 <small class="danger" id="errorUser" style="color: red;"><%= locals.errors && errors.color ? errors.color.msg : null %> </small>
                 <div>
-                    <input type="checkbox" name="recuerdame">Recordar color</div>
+                    <input type="checkbox" name="recuerdame" id="recuerdame" onclick="cambiarColor()">Recordar color</div>
                 </div>
                 <div class="form-login">
                     <label for="email">Email</label>
@@ -46,5 +46,6 @@
         </main> 
         <img src="/images/node.jpg" width="60%">
     </form>
+    <script src="/js/color.js"></script>
 </body>
 </html>
