@@ -4,7 +4,8 @@
 <body class="<%= session.color %>">
 	<h1><%= title %> </h1>
 	<%- include("./partials/header") %> 
-	<h2><%= session.name %>, gracias por visitarnos. </h2>
+	<div class="user">
+		<h2><%= session.name %>, gracias por visitarnos. </h2>
 	<div>
 		<p>Hola <%= session.name %> , elegiste el color: <%= session.color %>, tu email es:
 			<%= session.email %> y tu edad es:<%= session.edad %></p>
@@ -13,6 +14,8 @@
 	<form action="/user/quit">
 	  <button type="submit">Olvidar el color</button> 
 	</form>
+	</div>
+	
 	
 	<img src="/images/node.jpg" width="60%">
 </body>
