@@ -5,6 +5,13 @@ module.exports={
         }else{
             next()
         }
+    },
+    inSession : (req, res, next)=>{
+        if (req.session.user) {
+            res.redirect("/user/info")
+        }else{
+            next()
+        }
     }
     
 }
