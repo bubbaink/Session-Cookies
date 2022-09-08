@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="/css/login.css">
 <%- include("./partials/head") %> 
 <body>
 	<h1><%= title %> </h1>
 	<%- include("./partials/header") %>
-    <form action="/admin" method="GET">
+    <form action="/user/create" method="POST">
         <main>
-            <div>
-                <label for="user">User</label>
-                <input type="text" name="user" id="user">
+            <div class="form-login">
+                <div class="login-label">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                </div>
+                <small class="danger" id="errorUser" style="color: red;"><%= locals.errors && errors.name ? errors.name.msg : null %> </small>
+                <div class="form-login">
+                    <label for="colour">Color a eleccion</label>
+                    <select name="color" id="color" >
+                        <option></option>
+                        <option>green</option>
+                        <option>yellow</option>
+                        <option>blue</option>
+                        <option>red</option>
+                    </select>   
+                </div>
+                <small class="danger" id="errorUser" style="color: red;"><%= locals.errors && errors.color ? errors.color.msg : null %> </small>
+                <div>
+                    <input type="checkbox" name="recuerdame">Recordar color</div>
+                </div>
+                <div class="form-login">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Ingrese su email">
+                </div>
+                <small class="danger" id="errorUser" style="color: red;"><%= locals.errors && errors.email ? errors.email.msg : null %> </small>
+                <div class="form-login">
+                    <label for="edad">edad</label>
+                    <input type="text" name="edad" id="edad" placeholder="Ingrese su edad">
+                </div>
+                <small class="danger" id="errorUser" style="color: red;"><%= locals.errors && errors.edad ? errors.edad.msg : null %> </small>
+                <div class="form-login">
+                    <button type="submit">Entrar</button>
+                </div>
+                
             </div>
-            <button type="submit">Entrar</button>
+            
         </main> 
         <img src="/images/node.jpg" width="60%">
     </form>

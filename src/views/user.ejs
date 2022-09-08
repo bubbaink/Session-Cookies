@@ -2,8 +2,15 @@
 <html lang="en">
 <%- include("./partials/head") %> 
 <body>
-	<h1>Hola Admin <%= title %> </h1>
+	<h1><%= title %> </h1>
 	<%- include("./partials/header") %> 
+	<div>
+		<p><%= session.name %> </p>
+		<p><%= session.color %></p>
+		<p><%= session.email %></p>
+		<p><%= session.edad %></p>
+	</div>
+	
 	<img src="/images/node.jpg" width="60%">
 </body>
 </html>
